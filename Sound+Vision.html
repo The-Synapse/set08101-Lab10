@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <title>SET08101 - Sound+Vision</title>
+</head>
+
+<body>
+    <h1>Plays an audio file on a loop</h1>
+
+    <audio id="Idiot_audio" autoplay="autoplay" loop controls>
+        <source src="you_are_an_idiot.mp3" type="audio/mpeg">
+        <!--Your browser does not support the audio element.-->
+    </audio>
+    <button onclick="toggle_loop()" type="button">Toggle looping</button>
+
+    <script>
+        var no = document.getElementById("Idiot_audio");
+
+        function toggle_loop() {
+            if (ao.loop) { ao.loop = false }
+            else { ao.loop = true; }
+            ao.load();
+        }
+    </script>
+</body>
+</html>
